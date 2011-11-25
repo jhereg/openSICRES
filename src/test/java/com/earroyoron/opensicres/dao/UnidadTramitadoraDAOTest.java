@@ -32,7 +32,7 @@ public class UnidadTramitadoraDAOTest extends DBconnection
 	}
 
 	@Test( enabled = true )
-	public void listo_todas_las_unidades_tramitadoras() throws Exception
+	public void getAll_UnidadesTramitadoras() throws Exception
 	{
 		List<UnidadTramitadora> lista = unidadTramitadoraDao.getAll();
 		AssertJUnit.assertEquals( 2, lista.size() );

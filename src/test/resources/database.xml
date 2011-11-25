@@ -2,4 +2,5 @@
 <dataset>
 <!--Unidades tramitadoras -->
 <unidadtramitadora id="1" codigo="0456" nombre="Ministerio del Aire" />
+<unidadtramitadora id="2" codigo="0676" nombre="Ministerio del Mar" />
 </dataset>
