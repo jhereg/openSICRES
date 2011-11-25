@@ -2,12 +2,10 @@ package com.earroyoron.opensicres.dao;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.nullValue;
 
 import java.util.List;
 
 import org.apache.tapestry5.ioc.test.TestUtils;
-import org.testng.AssertJUnit;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
@@ -32,10 +30,18 @@ public class UnidadTramitadoraDAOTest extends DBconnection
 	}
 
 	@Test( enabled = true )
-	public void getAll_UnidadesTramitadoras() throws Exception
+	public void getAll_devuelveTodas() throws Exception
 	{
 		List<UnidadTramitadora> lista = unidadTramitadoraDao.getAll();
-		AssertJUnit.assertEquals( 2, lista.size() );
+		assertThat(lista.size(), is(2) );
 	}
 	
+	@Test( enabled = true )
+	public void getAll_contenidoCorrecto() throws Exception
+	{
+		List<UnidadTramitadora> lista = unidadTramitadoraDao.getAll();
+		UnidadTramitadora unidad = lista.get(0);
+		assertThat(unidad.getCodigo(), is("0456"));
+		assertThat(unidad.getNombre(), is("Ministerio del Aire"));
+	}
 }
