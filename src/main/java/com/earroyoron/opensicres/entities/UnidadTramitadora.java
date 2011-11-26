@@ -1,7 +1,8 @@
 package com.earroyoron.opensicres.entities;
 
+
+
 import java.util.List;
-import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+
 @Entity
 public class UnidadTramitadora {
 
@@ -17,7 +19,9 @@ public class UnidadTramitadora {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
+	@Column(unique=true, nullable=false) 
 	private String codigo;
+	
 	private String nombre;
 	
 	@OneToMany(mappedBy="unidad")
@@ -45,6 +49,14 @@ public class UnidadTramitadora {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	public List<Libro> getLibros() {
+		return libros;
+	}
+
+	public void setLibros(List<Libro> libros) {
+		this.libros = libros;
 	}
 	
 	

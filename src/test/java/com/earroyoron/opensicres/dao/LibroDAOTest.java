@@ -10,17 +10,17 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-import com.earroyoron.opensicres.entities.UnidadTramitadora;
+import com.earroyoron.opensicres.entities.Libro;
 
-public class UnidadTramitadoraDAOTest extends DBconnection
+public class LibroDAOTest extends DBconnection
 {
-	private UnidadTramitadoraDAO unidadTramitadoraDao;
+	private LibroDAO libroDao;
 
 
 	@BeforeSuite
 	public void getHibernateSession() throws Exception
 	{
-		unidadTramitadoraDao = TestUtils.create( UnidadTramitadoraHibernate.class, "session", super.sessionForTesting );
+		libroDao = TestUtils.create( LibroHibernate.class, "session", super.sessionForTesting );
 	}
 
 	@BeforeMethod
@@ -32,16 +32,16 @@ public class UnidadTramitadoraDAOTest extends DBconnection
 	@Test( enabled = true )
 	public void getAll_devuelveTodas() throws Exception
 	{
-		List<UnidadTramitadora> lista = unidadTramitadoraDao.getAll();
-		assertThat(lista.size(), is(3) );
+		List<Libro> lista = libroDao.getAll();
+		assertThat(lista.size(), is(5) );
 	}
 	
 	@Test( enabled = true )
 	public void getAll_contenidoCorrecto() throws Exception
 	{
-		List<UnidadTramitadora> lista = unidadTramitadoraDao.getAll();
-		UnidadTramitadora unidad = lista.get(0);
-		assertThat(unidad.getCodigo(), is("0456"));
-		assertThat(unidad.getNombre(), is("Oficina Moncloa"));
+		List<Libro> lista = libroDao.getAll();
+		Libro libro = lista.get(0);
+		assertThat(libro.getNombre(), is("LibroA"));
+		assertThat(libro.getUnidad().getCodigo(),is("0456"));
 	}
 }

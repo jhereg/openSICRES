@@ -2,15 +2,21 @@
 <dataset>
 
 <!--Unidades tramitadoras -->
-<unidadtramitadora id="1" codigo="0456" nombre="Ministerio del Aire" />
-<unidadtramitadora id="2" codigo="0676" nombre="Ministerio del Mar" />
+<unidadtramitadora id="1" codigo="0456" nombre="Oficina Moncloa" />
+<unidadtramitadora id="2" codigo="0676" nombre="Oficina Doctor Lacasi, 13" />
+<unidadtramitadora id="3" codigo="0990" nombre="Oficina Plaza de España" />
 
-<!--Libros de Registro -->
+<!--Libros de Registro 
+	Un libro está asignado a una unidad tramitadora -->
 <libro id="1" nombre="LibroA" descripcion="LibroAdesc" fkunidad="1" />
 <libro id="2" nombre="LibroB" descripcion="LibroBdesc" fkunidad="1" />
+<libro id="3" nombre="LibroC" descripcion="LibroCdesc" fkunidad="2" />
+<libro id="4" nombre="LibroD" descripcion="LibroDdesc" fkunidad="2" />
+<libro id="5" nombre="LibroE" descripcion="LibroEdesc" fkunidad="3" />
 
 
-<!--  Apuntes Registrales -->
+<!--  Apuntes Registrales 
+	  El apunte registral se inscribe en un libro -->
 <apunteregistral id="1" numero="2011000000000000"  fecha="2011-12-22 12:23:22" fklibro="1"/>
 <apunteregistral id="2" numero="2011000000000000"  fklibro="1"/>
 <apunteregistral id="3" numero="2011000000000000"  fklibro="1"/>
