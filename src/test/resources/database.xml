@@ -1,6 +1,25 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dataset>
+
 <!--Unidades tramitadoras -->
 <unidadtramitadora id="1" codigo="0456" nombre="Ministerio del Aire" />
 <unidadtramitadora id="2" codigo="0676" nombre="Ministerio del Mar" />
+
+<!--Libros de Registro -->
+<libro id="1" nombre="LibroA" descripcion="LibroAdesc" fkunidad="1" />
+<libro id="2" nombre="LibroB" descripcion="LibroBdesc" fkunidad="1" />
+
+
+<!--  Apuntes Registrales -->
+<apunteregistral id="1" numero="2011000000000000"  fecha="2011-12-22 12:23:22" fklibro="1"/>
+<apunteregistral id="2" numero="2011000000000000"  fklibro="1"/>
+<apunteregistral id="3" numero="2011000000000000"  fklibro="1"/>
+<apunteregistral id="4" numero="2011000000000000"  fklibro="1"/>
+<apunteregistral id="5" numero="2011000000000000"  fklibro="1"/>
+<apunteregistral id="6" numero="2011000000000000"  fklibro="1"/>
+<apunteregistral id="7" numero="2011000000000000"  fklibro="1"/>
+<apunteregistral id="8" numero="2011000000000000"  fklibro="2"/>
+<apunteregistral id="9" numero="2011000000000000"  fklibro="2"/>
+<apunteregistral id="10" numero="2011000000000000"  fklibro="2"/>
+
 </dataset>

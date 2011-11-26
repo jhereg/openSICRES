@@ -2,6 +2,12 @@ package com.earroyoron.opensicres.dao;
 
 import java.util.List;
 
+/**
+ * @see http://docs.jboss.org/hibernate/core/3.3/reference/en/html/querycriteria.html
+ * @author earroyoron
+ *
+ * @param <E>
+ */
 
 
 public interface GenericDAO<E> {

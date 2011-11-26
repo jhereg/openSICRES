@@ -12,7 +12,7 @@ import org.hibernate.Session;
 import org.hibernate.cfg.Configuration;
 import org.testng.annotations.AfterClass;
 
-import com.earroyoron.opensicres.entities.UnidadTramitadora;
+import com.earroyoron.opensicres.entities.*;
 
 
 
@@ -27,7 +27,7 @@ public abstract class DBconnection {
 public  DBconnection () {
 	 log.debug("Comienza inicio HB");
 	 Configuration config = new Configuration();
-	 config.addAnnotatedClass(UnidadTramitadora.class);
+	 config.addAnnotatedClass(UnidadTramitadora.class).addAnnotatedClass(Libro.class).addAnnotatedClass(ApunteRegistral.class);
 	 config.setProperty("hibernate.dialect", "org.hibernate.dialect.DerbyDialect");
 	 config.setProperty("hibernate.connection.driver_class", "org.apache.derby.jdbc.EmbeddedDriver");
 	 config.setProperty("hibernate.connection.url", "jdbc:derby:memory:testing;create=true");
