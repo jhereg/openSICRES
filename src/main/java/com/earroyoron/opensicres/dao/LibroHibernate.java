@@ -7,6 +7,7 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 
 import com.earroyoron.opensicres.entities.Libro;
+import java.security.InvalidParameterException;
 
 public class LibroHibernate  extends AbstractDAO<Libro> implements LibroDAO {
 
@@ -20,4 +21,12 @@ public class LibroHibernate  extends AbstractDAO<Libro> implements LibroDAO {
 		return criterio.list();
 	}
 
+        @Override
+        public Libro getById(Long id) {
+            if (id==null) {
+                throw new InvalidParameterException("No se puede consultar un id nulo");
+            }
+            else 
+                return  (Libro) session.get(Libro.class, id);
+        }
 }

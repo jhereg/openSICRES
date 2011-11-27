@@ -280,17 +280,6 @@
 
     <repositories>
 
-		<!-- This repository is only needed when the tapestry-release-version is
-			a snapshot release. -->
-        <repository>
-            <id>apache-snapshots</id>
-            <url>http://repository.apache.org/snapshots/</url>
-        </repository>
-
-        <repository>
-            <id>apache-tapestry</id>
-            <url>https://repository.apache.org/content/repositories/orgapachetapestry-194/</url>
-        </repository>
 
 		<!-- For snapshots of tynamo libraries -->
         <repository>
