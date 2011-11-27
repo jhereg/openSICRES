@@ -6,8 +6,8 @@ import static org.hamcrest.Matchers.is;
 import java.util.List;
 
 import org.apache.tapestry5.ioc.test.TestUtils;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import com.earroyoron.opensicres.entities.Libro;
@@ -17,7 +17,7 @@ public class LibroDAOTest extends DBconnection
 	private LibroDAO libroDao;
 
 
-	@BeforeSuite
+	@BeforeClass
 	public void getHibernateSession() throws Exception
 	{
 		libroDao = TestUtils.create( LibroHibernate.class, "session", super.sessionForTesting );

@@ -5,3 +5,4 @@ test-output/**
 .project
 .settings/**
 derby.log
+src/site/**

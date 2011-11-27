@@ -12,9 +12,9 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 /**
- * Un apunte registral realizado en nuestra aplicación
+ * Un apunte registral realizado en nuestra aplicaci√≥n
  * El contenido de nuestro apunte no tiene que ser, necesariamente, lo mismo que luego intercambiamos!
- * Es decir, podemos intercambiar más o menos cosas, depende del formato de intercambio etc.
+ * Es decir, podemos intercambiar m√°s o menos cosas, depende del formato de intercambio etc.
  * @author earroyoron
  *
  */
